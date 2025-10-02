@@ -1,0 +1,471 @@
+:root {
+  --color-1: #ffffff;
+  --color-2: #000000;
+  --color-3: #ffdc26;
+  --color-4: #e6c519;
+  --color-6: #cdcdcd;
+  --color-7: #A1A1A1;
+
+  --color-111: #ff0000;
+
+
+  --transform1: box-shadow 0.3s;
+  --transform2: fill 0.3s;
+  --transform3: color 0.3s;
+
+
+  --shadow-1: 0 0 8px 0 rgb(96 125 139 / 56%);
+  --shadow-2: 0 0 8px 0 rgb(255 61 0 / 32%);
+
+  --transform4: background-color 0.3s;
+}
+
+html {
+  font-family: 'Roboto', Sans-Serif, Arial, serif;
+  font-size: 62.5%;
+  color: var(--color-2);
+
+}
+
+body {
+  background-color: var(--color-1);
+  /*margin:0;*/
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+/*Жёлтая кнопка 1*/
+.btn {
+  display: flex;
+  align-content: center;
+  background-color: var(--color-3);
+  border-radius: 2rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: var(--transform4) ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--color-4);
+}
+
+.btn:active {
+  box-shadow: var(--shadow-2);
+}
+
+/*Жёлтая кнопка 1*/
+
+
+/*Для жёлтой кнопки*/
+.btn-s-1 {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+}
+
+.btn-s-2 {
+  font-size: 1.4rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+}
+
+.btn-s-3 {
+  font-size: 1.6rem;
+  padding: 1rem 7.5rem 1rem 7.5rem;
+}
+
+/*Для жёлтой кнопки*/
+
+/*Неактивная кнопка*/
+.in-btn {
+  display: flex;
+  align-content: center;
+  background-color: var(--color-6);
+  border-radius: 2rem;
+  width: fit-content;
+  cursor: default;
+}
+
+/*Неактивная кнопка*/
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*Добавить или отнять*/
+
+.up-qty {
+  display: flex;
+  border-radius: 2.5rem;
+  justify-content: center;
+  border: 0.2rem solid #ffdc26;
+  width: fit-content;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  font-size: 2rem;
+}
+
+.minus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 2.5rem 0 0 2.5rem;
+  cursor: pointer;
+}
+
+.minus path {
+  fill: var(--color-2);
+}
+
+.plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 0 2.5rem 2.5rem 0;
+  cursor: pointer;
+}
+
+.plus path {
+  fill: var(--color-2);
+}
+
+/*Добавить или отнять*/
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+/*Кнопка иконка с текстом*/
+
+.icon-t {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-2);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: var(--transform1), var(--transform2), var(--transform3) ease-in-out;
+}
+
+.icon-t svg {
+  width: 3.56rem;
+  height: 3.56rem;
+}
+
+.icon-t {
+  fill: var(--color-7);
+}
+
+.icon-t:hover {
+  box-shadow: var(--shadow-1);
+}
+
+.hov-t:hover {
+  fill: var(--color-2);
+}
+
+.icon-t:active {
+  box-shadow: var(--shadow-2);
+}
+
+/*Кнопка иконка с текстом*/
+
+
+/*Кнопка иконка*/
+
+
+.icon-nt {
+  display: flex;
+  color: var(--color-2);
+  fill: var(--color-7);
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: var(--transform1), var(--transform2), var(--transform3) ease-in-out;
+}
+
+.icon-nt svg {
+  width: 4.4rem;
+  height: 4.4rem;
+}
+
+.icon-nt:hover {
+  box-shadow: var(--shadow-1);
+  color: var(--color-2);
+  fill: var(--color-2);
+}
+
+.icon-nt:active {
+  box-shadow: var(--shadow-2);
+}
+
+.icon-nt path {
+  fill: var(--color-2);
+}
+
+
+/*Кнопка иконка*/
+
+
+/*checkbox*/
+
+.checkbox {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 6px;
+  border: 1px solid #ff9b00;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease-in-out;
+}
+.checkbox:focus {
+  box-shadow: 0 0 0 2px rgba(255, 155, 0, 0.5);
+}
+.checkbox:hover {
+  background-color: #E7E7E7;
+}
+
+.checkbox-checked {
+  background-color: #FFDC26;
+  border-color: #FFDC26;
+}
+
+.checkbox-checked:hover {
+  background-color: #FFDC26;
+  border-color: #FFDC26;
+}
+
+/*checkbox*/
+
+
+/*captcha*/
+
+.hov-cap:hover {
+  background-color: #fff8c0;
+}
+
+.captcha {
+  display: flex;
+  height: 8rem;
+  width: 27.4rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background-color: #f7f7f7;
+}
+.b-checked {
+  display: flex;
+  width: 8rem;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-inf-1 {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: flex-end;*/
+  width: 19.4rem;
+}
+
+.b-inf-2 {
+  display: flex;
+  height: 100%;
+  font-size: 1.6rem;
+  /*justify-content: flex-end;*/
+}
+
+.b-robot {
+  display: flex;
+  width: 11.6rem;
+  margin-top: 2rem;
+  align-items: center;
+  /*justify-content: flex-start;*/
+}
+
+.b-footer {
+  display: flex;
+  margin: 0 0.5rem 0.5rem 0;
+  justify-content: flex-end;
+  font-size: 1.1rem;
+}
+
+.b-logo {
+  display: flex;
+  /*height: 100%;*/
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.b-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.substrate {
+  position: absolute;
+  background-color: #ff0000;
+  width: 2.2rem;
+  height: 1.2rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.b-s {
+  position: relative;
+}
+
+.name-logo {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+.success-pre-i line {
+  stroke: #000000;
+  stroke-width: 1;
+  stroke-dasharray: 32 32;
+  stroke-dashoffset: 8;
+  opacity: 0;
+  animation: firework 0.3s ease-out forwards;
+}
+
+@keyframes firework {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 8;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -8;
+  }
+}
+
+.b-circle {
+  width: 28px;
+  height: 28px;
+}
+
+.s-circle {
+  stroke: none;
+  fill: #038127;
+  animation: circle-grow1 0.4s ease-in-out forwards;
+}
+
+.effect-circle {
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  stroke-linecap: round;
+  opacity: 0;
+  animation: check-draw1 0.2s 0.4s ease-in-out forwards;
+}
+
+@keyframes circle-grow1 {
+  0% {
+    r: 3px;
+  }
+  100% {
+    r: 14px;
+  }
+}
+
+@keyframes check-draw1 {
+  0% {
+    stroke-dashoffset: 24;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.error-icon {
+  --err: #e53935;
+}
+
+.error-icon .circle {
+  fill: none;
+  stroke: var(--err);
+  stroke-width: 4;
+  stroke-dasharray: 176;      /* длина окружности */
+  stroke-dashoffset: 176;
+  animation: drawCircle 0.42s ease forwards;
+}
+
+.error-icon .line {
+  stroke: var(--err);
+  stroke-width: 4;
+  stroke-linecap: round;
+
+  /* для корректного scale в SVG */
+  transform-box: fill-box;
+  transform-origin: 32px 32px;
+  transform: scale(0);
+
+  animation: pop 0.25s cubic-bezier(.2,.9,.3,1) forwards;
+}
+
+.error-icon .line1 {
+  animation-delay: 0.42s;
+}
+
+.error-icon .line2 {
+  animation-delay: 0.62s;
+}
+
+@keyframes drawCircle {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/*captcha*/
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/*Общие*/
+
+.c-el {
+  background-color: var(--color-1);
+}
+
+.f-s {
+  font-size: 1.6rem;
+}
+
+/*Общие*/
+

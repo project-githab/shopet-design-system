@@ -1,0 +1,354 @@
+<!--Жёлтая кнопка 1-->
+<div class="btn">
+  <div class="btn-s-1">Кнопка 1</div>
+</div>
+<!--Жёлтая кнопка 1 -->
+<!--Неактивная кнопка 1-->
+<div class="in-btn">
+  <div class="btn-s-1">Кнопка 1</div>
+</div>
+<!--Неактивная кнопка 1 -->
+
+
+<!--Жёлтая кнопка 2-->
+<div class="btn">
+  <div class="btn-s-2">Кнопка Кнопка 2</div>
+</div>
+<!--Жёлтая кнопка 2 -->
+<!--Неактивная кнопка 2-->
+<div class="in-btn">
+  <div class="btn-s-2">Кнопка Кнопка 2</div>
+</div>
+<!--Неактивная кнопка 2 -->
+
+<!--Жёлтая кнопка 3-->
+<div class="btn">
+  <div class="btn-s-3">Кнопка 3</div>
+</div>
+<!--Жёлтая кнопка 3 -->
+<div class="in-btn">
+  <div class="btn-s-3">Кнопка 3</div>
+</div>
+<!--Жёлтая кнопка 3 -->
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+<!--Добавить или отнять -->
+
+<div class="up-qty c-el">
+
+  @if (quantity === 1) {
+    <div class="minus">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path
+          d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+      </svg>
+    </div>
+  } @else {
+    <div class="minus" (click)="delete()">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path d="M200-440v-80h560v80H200Z"/>
+      </svg>
+    </div>
+  }
+
+  <div class="number">{{ quantity }}</div>
+
+
+  <div class="plus" (click)="add()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+      <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+    </svg>
+  </div>
+
+
+</div>
+
+<!--Добавить или отнять -->
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+
+<!--Кнопка иконка с текстом-->
+
+<div class="icon-t hov-t c-el ">
+  <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px">
+    <path
+      d="M120-160v-100q0-36.67 18.5-64.17T186.67-366q65.33-30.33 127.66-45.5 62.34-15.17 125.67-15.17 24 0 47 2.17t47 6.5q-4.67 58 21.33 109.5t76 81.83V-160H120ZM760-22l-60-60v-186q-44-13-72-49.5T600-402q0-58 41-99t99-41q58 0 99 41t41 99q0 45-25.5 80T790-272l50 50-60 60 60 60-80 80ZM440-493.33q-64 0-108.67-44.67-44.66-44.67-44.66-108.67t44.66-108.66Q376-800 440-800t108.67 44.67q44.66 44.66 44.66 108.66T548.67-538Q504-493.33 440-493.33ZM740-382q17 0 28.5-11.5T780-422q0-17-11.5-28.5T740-462q-17 0-28.5 11.5T700-422q0 17 11.5 28.5T740-382Z"></path>
+  </svg>
+  <div class="f-s">Войти</div>
+</div>
+
+
+<!--Кнопка иконка с текстом-->
+
+<!--Кнопка иконка-->
+
+<div class="icon-nt c-el">
+  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+    <path
+      d="M360-390q-21 0-35.5-14.5T310-440q0-21 14.5-35.5T360-490q21 0 35.5 14.5T410-440q0 21-14.5 35.5T360-390Zm240 0q-21 0-35.5-14.5T550-440q0-21 14.5-35.5T600-490q21 0 35.5 14.5T650-440q0 21-14.5 35.5T600-390ZM480-160q134 0 227-93t93-227q0-24-3-46.5T786-570q-21 5-42 7.5t-44 2.5q-91 0-172-39T390-708q-32 78-91.5 135.5T160-486v6q0 134 93 227t227 93Zm0 80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>
+  </svg>
+</div>
+<!--Кнопка иконка-->
+
+
+<!--checkbox-->
+<div class="checkbox"
+     [ngClass]="{'checkbox-checked': isCheckbox}"
+     (click)="clickCheckbox()"
+     (keydown)="handleKeydown($event)"
+     tabindex="0"
+     role="checkbox"
+     [attr.aria-checked]="isCheckbox">
+
+  @if (isCheckbox) {
+    <svg xmlns="http://www.w3.org/2000/svg"
+         height="20px"
+         viewBox="0 -960 960 960"
+         width="20px">
+      <path d="M389-227 154-461l91-92 144 145 327-326 91 90-418 417Z"/>
+    </svg>
+  }
+</div>
+
+<!--captcha-1-->
+<div class="captcha">
+
+  <div class="b-checked">
+
+    <!--checkbox-->
+
+
+    @if (!closeBox) {
+
+      <div class="hov-cap checkbox"
+           [ngClass]="{'check-checked': isCheckboxR}"
+           (click)="clickCheckboxR()"
+           (keydown)="handleKeydownR($event)"
+           tabindex="0"
+           role="checkbox"
+           [attr.aria-checked]="isCheckboxR">
+
+        @if (isCheckboxR) {
+          <svg xmlns="http://www.w3.org/2000/svg"
+               height="20px"
+               viewBox="0 -960 960 960"
+               width="20px">
+            <path d="M389-227 154-461l91-92 144 145 327-326 91 90-418 417Z"/>
+          </svg>
+        }
+      </div>
+
+    }
+
+    @if (radioWaveEffect) {
+      <svg class="success-pre-i" viewBox="0 0 30 30" height="30px" width="30px">
+        <g>
+          <line x1="15" x2="15" y1="7.5" y2="0"></line>
+          <line x1="20.303" x2="23.787" y1="9.697" y2="5.303"></line>
+          <line x1="22.5" x2="30" y1="15" y2="15"></line>
+          <line x1="20.303" x2="23.787" y1="20.303" y2="24.697"></line>
+          <line x1="15" x2="15" y1="22.5" y2="30"></line>
+          <line x1="9.697" x2="5.303" y1="20.303" y2="23.787"></line>
+          <line x1="7.5" x2="0" y1="15" y2="15"></line>
+          <line x1="9.697" x2="5.303" y1="9.697" y2="5.303"></line>
+        </g>
+      </svg>
+    }
+
+
+    @if (isLoadCheckedRobot) {
+      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="5" fill="none" stroke="#000000"
+                stroke-width="2">
+          <animate attributeName="r" from="5" to="30" dur="1.5s" begin="0s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s"
+                   repeatCount="indefinite"/>
+        </circle>
+        <circle cx="30" cy="30" r="5" fill="none" stroke="#000000"
+                stroke-width="2">
+          <animate attributeName="r" from="5" to="30" dur="1.5s" begin="0.5s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0.5s"
+                   repeatCount="indefinite"/>
+        </circle>
+        <circle cx="30" cy="30" r="5" fill="none" stroke="#000000"
+                stroke-width="2">
+          <animate attributeName="r" from="5" to="30" dur="1.5s" begin="1s"
+                   repeatCount="indefinite"/>
+          <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="1s"
+                   repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    }
+
+
+
+
+
+    <!--checkbox-->
+
+  </div>
+
+  <div class="b-inf-1">
+
+    <div class="b-inf-2">
+      <div class="b-robot">
+        Я не робот
+      </div>
+
+
+      <div class="b-logo">
+        <div class="b-icon">
+          <div class="substrate"></div>
+          <div class="b-s">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill-rule="evenodd"
+                 clip-rule="evenodd" image-rendering="optimizeQuality"
+                 shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <path fill="#ffdc26" fill-rule="nonzero"
+                    d="M4.83 32c-.69 0-1.29-.25-1.79-.75-.5-.51-.76-1.1-.76-1.79V9.9c0-.68.26-1.28.76-1.78s1.1-.76 1.79-.76h3.8c0-2.04.7-3.77 2.09-5.21C12.12.72 13.83 0 15.87 0s3.8.72 5.28 2.15c1.48 1.44 2.22 3.17 2.22 5.21h3.8c.69 0 1.29.26 1.79.76s.76 1.1.76 1.78v19.56c0 .69-.26 1.28-.76 1.79-.5.5-1.1.75-1.79.75zM16 19.05q3.06 0 5.28-2.22c1.47-1.48 2.21-3.23 2.21-5.27h-2.54c0 1.35-.48 2.51-1.46 3.49-.97.97-2.14 1.46-3.49 1.46s-2.52-.49-3.49-1.46c-.98-.98-1.46-2.14-1.46-3.49H8.51c0 2.04.74 3.79 2.21 5.27q2.22 2.22 5.28 2.22M11.17 7.36h9.66c0-1.35-.47-2.49-1.4-3.42-.93-.94-2.08-1.4-3.43-1.4s-2.5.46-3.43 1.4c-.93.93-1.4 2.07-1.4 3.42"/>
+            </svg>
+          </div>
+        </div>
+        <div class="name-logo">
+          shopet.ru
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="b-footer">
+      Система защиты от роботов. ИИ
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--captcha-1-->
+
+
+<!--captcha-2-->
+
+<div class="captcha">
+
+  <div class="b-checked">
+
+    <!--ok-->
+
+    <svg class="b-circle" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+      <circle class="s-circle" cx="14" cy="14" r="14" fill="#038127"/>
+      <path class="effect-circle" fill="none" d="M8 14l4 4 8-8"/>
+    </svg>
+
+    <!--ok-->
+
+  </div>
+
+  <div class="b-inf-1">
+
+    <div class="b-inf-2">
+      <div class="b-robot">
+        Я не робот
+      </div>
+
+
+      <div class="b-logo">
+        <div class="b-icon">
+          <div class="substrate"></div>
+          <div class="b-s">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill-rule="evenodd"
+                 clip-rule="evenodd" image-rendering="optimizeQuality"
+                 shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <path fill="#ffdc26" fill-rule="nonzero"
+                    d="M4.83 32c-.69 0-1.29-.25-1.79-.75-.5-.51-.76-1.1-.76-1.79V9.9c0-.68.26-1.28.76-1.78s1.1-.76 1.79-.76h3.8c0-2.04.7-3.77 2.09-5.21C12.12.72 13.83 0 15.87 0s3.8.72 5.28 2.15c1.48 1.44 2.22 3.17 2.22 5.21h3.8c.69 0 1.29.26 1.79.76s.76 1.1.76 1.78v19.56c0 .69-.26 1.28-.76 1.79-.5.5-1.1.75-1.79.75zM16 19.05q3.06 0 5.28-2.22c1.47-1.48 2.21-3.23 2.21-5.27h-2.54c0 1.35-.48 2.51-1.46 3.49-.97.97-2.14 1.46-3.49 1.46s-2.52-.49-3.49-1.46c-.98-.98-1.46-2.14-1.46-3.49H8.51c0 2.04.74 3.79 2.21 5.27q2.22 2.22 5.28 2.22M11.17 7.36h9.66c0-1.35-.47-2.49-1.4-3.42-.93-.94-2.08-1.4-3.43-1.4s-2.5.46-3.43 1.4c-.93.93-1.4 2.07-1.4 3.42"/>
+            </svg>
+          </div>
+        </div>
+        <div class="name-logo">
+          shopet.ru
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="b-footer">
+      Система защиты от роботов. ИИ
+    </div>
+
+  </div>
+
+</div>
+
+<!--captcha-2-->
+
+
+<!--captcha-3-->
+
+<div class="captcha">
+
+  <div class="b-checked">
+
+    <!--err svg-->
+
+    <svg class="error-icon"
+         xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 64 64"
+         width="40" height="40"
+         aria-hidden="true" role="img">
+      <title>Ошибка</title>
+      <circle class="circle" cx="32" cy="32" r="28"/>
+      <line class="line line1" x1="22" y1="22" x2="42" y2="42"/>
+      <line class="line line2" x1="42" y1="22" x2="22" y2="42"/>
+    </svg>
+
+    <!--err svg-->
+
+  </div>
+
+  <div class="b-inf-1">
+
+    <div class="b-inf-2">
+      <div class="b-robot">
+        Я не робот
+      </div>
+
+
+      <div class="b-logo">
+        <div class="b-icon">
+          <div class="substrate"></div>
+          <div class="b-s">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill-rule="evenodd"
+                 clip-rule="evenodd" image-rendering="optimizeQuality"
+                 shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <path fill="#ffdc26" fill-rule="nonzero"
+                    d="M4.83 32c-.69 0-1.29-.25-1.79-.75-.5-.51-.76-1.1-.76-1.79V9.9c0-.68.26-1.28.76-1.78s1.1-.76 1.79-.76h3.8c0-2.04.7-3.77 2.09-5.21C12.12.72 13.83 0 15.87 0s3.8.72 5.28 2.15c1.48 1.44 2.22 3.17 2.22 5.21h3.8c.69 0 1.29.26 1.79.76s.76 1.1.76 1.78v19.56c0 .69-.26 1.28-.76 1.79-.5.5-1.1.75-1.79.75zM16 19.05q3.06 0 5.28-2.22c1.47-1.48 2.21-3.23 2.21-5.27h-2.54c0 1.35-.48 2.51-1.46 3.49-.97.97-2.14 1.46-3.49 1.46s-2.52-.49-3.49-1.46c-.98-.98-1.46-2.14-1.46-3.49H8.51c0 2.04.74 3.79 2.21 5.27q2.22 2.22 5.28 2.22M11.17 7.36h9.66c0-1.35-.47-2.49-1.4-3.42-.93-.94-2.08-1.4-3.43-1.4s-2.5.46-3.43 1.4c-.93.93-1.4 2.07-1.4 3.42"/>
+            </svg>
+          </div>
+        </div>
+        <div class="name-logo">
+          shopet.ru
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="b-footer">
+      Система защиты от роботов. ИИ
+    </div>
+
+  </div>
+
+</div>
+
+<!--captcha-3-->
