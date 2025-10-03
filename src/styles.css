@@ -8,6 +8,8 @@
   --color-8: #f1f1f1;
   --color-9: #E7E7E7;
   --color-10: #1ec18a;
+  --color-11: #ff4b00;
+  --color-12: #bfbfbf;
 
 
   --transform1: box-shadow 0.3s;
@@ -31,7 +33,7 @@ html {
 }
 
 body {
-  background-color: var(--color-1);
+  background-color: var(--color-9);
   /*margin:0;*/
 }
 
@@ -599,20 +601,108 @@ a {
   cursor: pointer;
   transition: var(--transform1) ease-in-out;
 }
+
 .b-logo:hover {
   border-radius: 0.5rem;
   box-shadow: var(--shadow-1);
 }
+
 .b-logo:active {
   box-shadow: var(--shadow-2);
 }
+
 .logo-name {
   font-weight: bold;
 }
+
 .under-logo {
   font-size: 1.5rem;
 }
+
 /*Логотип*/
+
+/*Блок-1*/
+.b-c1 {
+  display: flex;
+  background-color: var(--color-1);
+  max-width: 44rem;
+  min-height: 10rem;
+  border-radius: 0 0 2rem 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+}
+
+/*Блок-1*/
+
+
+/*Блок-2*/
+.b-c2 {
+  display: flex;
+  background-color: var(--color-1);
+  max-width: 40rem;
+  min-height: 24rem;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+/*Блок-2*/
+
+/*Блок-3*/
+
+.b-c3 {
+  display: flex;
+  background-color: var(--color-1);
+  max-width: 40rem;
+  min-height: 24rem;
+  border-radius: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.d-el {
+  fill: var(--color-11);
+}
+
+/*Блок-3*/
+
+/*Кнопка очистить поле поиска*/
+
+.btn-c {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  background-color: #d9d9d9;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-c:hover {
+  background-color: var(--color-12);
+}
+.btn-c path{
+  fill: var(--color-7);
+  transition: fill 0.3s ease;
+}
+.btn-c:hover path{
+  fill: var(--color-1);
+}
+
+
+/*Кнопка очистить поле поиска*/
+
+/*Поиск*/
+
+/*Поиск*/
+
+
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -646,8 +736,6 @@ a {
 
 .borderF:focus {
   box-shadow: 0 0 0 2px rgba(255, 155, 0, 0.5);
-
-
 }
 
 /*Общие*/
