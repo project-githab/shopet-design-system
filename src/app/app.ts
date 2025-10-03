@@ -11,7 +11,7 @@ import {NgClass} from '@angular/common';
 })
 export class App {
 
-  // Добавить или отнять--------------------
+  // Добавить или отнять----------
   quantity: number = 1;
   inputNumberValue: number = 10;
 
@@ -26,10 +26,10 @@ export class App {
     this.inputNumberValue = this.quantity;
   }
 
-  // Добавить или отнять--------------------
+  // Добавить или отнять----------
 
 
-  // checkbox--------------------
+  // checkbox----------
   isCheckbox = false
 
   clickCheckbox() {
@@ -43,13 +43,10 @@ export class App {
     }
   }
 
-  // checkbox--------------------
+  // checkbox----------
 
 
-
-
-  // Robot--------------------
-
+  // Robot----------
 
 
   isCheckboxR = false
@@ -78,6 +75,47 @@ export class App {
   }
 
 
-  // Robot--------------------
+  // Robot----------
 
+  // input с двумя SVG----------
+  inputType: string = 'password';
+  eye: boolean = false;
+
+  toggleEye() {
+
+    this.eye = !this.eye;
+
+    if (this.inputType === 'password') {
+      this.inputType = 'text';
+    } else {
+      this.inputType = 'password';
+    }
+
+  }
+
+  handleKeydownEye(event: KeyboardEvent) {
+    if (event.key === ' ') {
+      event.preventDefault();
+      this.toggleEye();
+    }
+  }
+
+  // input с двумя SVG----------
+
+
+  // Бургер----------
+  isRotateZ = false
+
+  rotate() {
+    this.isRotateZ = !this.isRotateZ;
+  }
+
+  handleKeydownBurger(event: KeyboardEvent) {
+    if (event.key === ' ') {
+      event.preventDefault();
+      this.rotate();
+    }
+  }
+
+  // Бургер----------
 }

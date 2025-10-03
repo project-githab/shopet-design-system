@@ -1,11 +1,11 @@
 <!--Жёлтая кнопка 1-->
 <div class="btn">
-  <div class="btn-s-1">Кнопка 1</div>
+  <div class="btn-s-1 f-s">Кнопка 1</div>
 </div>
 <!--Жёлтая кнопка 1 -->
 <!--Неактивная кнопка 1-->
 <div class="in-btn">
-  <div class="btn-s-1">Кнопка 1</div>
+  <div class="btn-s-1 f-s">Кнопка 1</div>
 </div>
 <!--Неактивная кнопка 1 -->
 
@@ -23,11 +23,11 @@
 
 <!--Жёлтая кнопка 3-->
 <div class="btn">
-  <div class="btn-s-3">Кнопка 3</div>
+  <div class="btn-s-3 f-s">Кнопка 3</div>
 </div>
 <!--Жёлтая кнопка 3 -->
 <div class="in-btn">
-  <div class="btn-s-3">Кнопка 3</div>
+  <div class="btn-s-3 f-s">Кнопка 3</div>
 </div>
 <!--Жёлтая кнопка 3 -->
 
@@ -40,14 +40,14 @@
 <div class="up-qty c-el">
 
   @if (quantity === 1) {
-    <div class="minus">
+    <div class="minus scs">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
         <path
           d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
       </svg>
     </div>
   } @else {
-    <div class="minus" (click)="delete()">
+    <div class="minus scs" (click)="delete()">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
         <path d="M200-440v-80h560v80H200Z"/>
       </svg>
@@ -57,7 +57,7 @@
   <div class="number">{{ quantity }}</div>
 
 
-  <div class="plus" (click)="add()">
+  <div class="plus scs" (click)="add()">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
       <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
     </svg>
@@ -88,7 +88,7 @@
 
 <!--Кнопка иконка-->
 
-<div class="icon-nt c-el">
+<div class="icon-nt c-el scs">
   <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
     <path
       d="M360-390q-21 0-35.5-14.5T310-440q0-21 14.5-35.5T360-490q21 0 35.5 14.5T410-440q0 21-14.5 35.5T360-390Zm240 0q-21 0-35.5-14.5T550-440q0-21 14.5-35.5T600-490q21 0 35.5 14.5T650-440q0 21-14.5 35.5T600-390ZM480-160q134 0 227-93t93-227q0-24-3-46.5T786-570q-21 5-42 7.5t-44 2.5q-91 0-172-39T390-708q-32 78-91.5 135.5T160-486v6q0 134 93 227t227 93Zm0 80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/>
@@ -98,7 +98,7 @@
 
 
 <!--checkbox-->
-<div class="checkbox"
+<div class="checkbox borderF"
      [ngClass]="{'checkbox-checked': isCheckbox}"
      (click)="clickCheckbox()"
      (keydown)="handleKeydown($event)"
@@ -126,7 +126,7 @@
 
     @if (!closeBox) {
 
-      <div class="hov-cap checkbox"
+      <div class="hov-cap checkbox borderF"
            [ngClass]="{'check-checked': isCheckboxR}"
            (click)="clickCheckboxR()"
            (keydown)="handleKeydownR($event)"
@@ -198,13 +198,13 @@
 
   <div class="b-inf-1">
 
-    <div class="b-inf-2">
+    <div class="b-inf-2 f-s">
       <div class="b-robot">
         Я не робот
       </div>
 
 
-      <div class="b-logo">
+      <div class="b-ch-l">
         <div class="b-icon">
           <div class="substrate"></div>
           <div class="b-s">
@@ -216,7 +216,7 @@
             </svg>
           </div>
         </div>
-        <div class="name-logo">
+        <div class="name-robot">
           shopet.ru
         </div>
       </div>
@@ -255,13 +255,13 @@
 
   <div class="b-inf-1">
 
-    <div class="b-inf-2">
+    <div class="b-inf-2 f-s">
       <div class="b-robot">
         Я не робот
       </div>
 
 
-      <div class="b-logo">
+      <div class="b-ch-l">
         <div class="b-icon">
           <div class="substrate"></div>
           <div class="b-s">
@@ -273,7 +273,7 @@
             </svg>
           </div>
         </div>
-        <div class="name-logo">
+        <div class="name-robot">
           shopet.ru
         </div>
       </div>
@@ -317,13 +317,13 @@
 
   <div class="b-inf-1">
 
-    <div class="b-inf-2">
+    <div class="b-inf-2 f-s">
       <div class="b-robot">
         Я не робот
       </div>
 
 
-      <div class="b-logo">
+      <div class="b-ch-l">
         <div class="b-icon">
           <div class="substrate"></div>
           <div class="b-s">
@@ -335,7 +335,7 @@
             </svg>
           </div>
         </div>
-        <div class="name-logo">
+        <div class="name-robot">
           shopet.ru
         </div>
       </div>
@@ -352,3 +352,163 @@
 </div>
 
 <!--captcha-3-->
+
+
+<!--input-->
+<input name="email" type="email"
+       class="input-i"
+       autocomplete="username"
+       placeholder="Укажите что нибудь"
+       required>
+<!--input-->
+
+
+<!--    input с SVG иконкой-->
+<div class="b-i-svg">
+
+  <input name="email" type="email" class="i-svg"
+         autocomplete="username"
+         placeholder="Укажите email" required>
+
+  <div class="b-ei-svg scs">
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+         viewBox="0 -960 960 960"
+         width="24px">
+      <path
+        d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/>
+    </svg>
+
+  </div>
+</div>
+<!--    input с SVG иконкой-->
+
+
+<!--    input с SVG иконкой в цвете-->
+<div class="b-i-svg">
+
+  <input name="email" type="email" class="i-svg"
+         autocomplete="username"
+         placeholder="Укажите email" required>
+
+  <div class="b-ei-svg gcs">
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+         viewBox="0 -960 960 960"
+         width="24px">
+      <path
+        d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/>
+    </svg>
+
+  </div>
+</div>
+<!--    input с SVG иконкой в цвете-->
+
+
+<!--    input с двумя SVG-->
+<div class="b-i-svg">
+
+  <input name="pass" [type]="inputType" class="input-two-svg"
+         autocomplete="current-password"
+         placeholder="Укажите пароль" required>
+
+
+  <div class="key">
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+         viewBox="0 -960 960 960"
+         width="24px">
+      <path
+        d="M280-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 120q-100 0-170-70T40-480q0-100 70-170t170-70q81 0 141.5 46T506-560h335l79 79-140 160-100-79-80 80-80-80h-14q-25 72-87 116t-139 44Z"></path>
+    </svg>
+
+  </div>
+
+
+  <div class="b-ei-svg cp scs borderF" (click)="toggleEye()"
+       (keydown)="handleKeydownEye($event)"
+       tabindex="0" role="checkbox">
+
+
+    @if (eye) {
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path
+          d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm.04-77.02q-42.89 0-72.95-30.02-30.07-30.03-30.07-72.92t30.02-72.95q30.03-30.07 72.92-30.07t72.95 30.02q30.07 30.03 30.07 72.92t-30.02 72.95q-30.03 30.07-72.92 30.07ZM480-192.59q-148.87 0-270.66-83.89Q87.54-360.37 32.59-500q54.95-139.63 176.75-223.52Q331.13-807.41 480-807.41t270.66 83.89Q872.46-639.63 927.41-500q-54.95 139.63-176.75 223.52Q628.87-192.59 480-192.59ZM480-500Zm.02 220q112.74 0 207-59.62T831.28-500q-50-100.76-144.28-160.38Q592.72-720 479.98-720q-112.74 0-207 59.62T128.72-500q50 100.76 144.28 160.38Q367.28-280 480.02-280Z"/>
+      </svg>
+    } @else {
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path
+          d="m645.43-432.07-68.28-68.28q7.33-38.39-22.33-72.22-29.67-33.82-76.38-26.5l-66.37-66.36q16.28-7.29 32.94-10.93Q461.67-680 480-680q75 0 127.5 52.5T660-500q0 17.85-3.64 34.99t-10.93 32.94Zm134.22 132.7-62.78-61.26q36.33-28.52 64.75-62.19 28.42-33.66 49.9-77.18-50.48-100.76-143.5-160.38Q595-720 480-720q-29 0-55.68 3.76-26.69 3.76-52.02 11.04l-68.21-68.21q41-17 84.95-25.5 43.96-8.5 90.96-8.5 152.43 0 272.47 84.69Q872.5-638.02 927.41-500q-23 59.48-60.98 110.93-37.97 51.46-86.78 89.7Zm9.48 246.24-163.7-161.94q-34.52 11.24-70.5 16.86-35.97 5.62-74.93 5.62-152.67 0-272.71-84.93Q87.26-362.46 32.59-500q20.76-52.52 53-98.86 32.24-46.34 72.76-83.29L49.3-792.72l58.63-58.63 739.59 739.83-58.39 58.39ZM219.85-621.37q-28.52 26.48-51.21 56.04-22.68 29.57-39.92 65.33 50 101 143.14 160.5Q365-280 480-280q17.85 0 35.77-2.14 17.93-2.14 37.93-5.14l-36-38q-9.81 2.76-18.85 4.02Q489.8-320 480-320q-75 0-127.5-52.5T300-500q0-9.57 1.14-18.73t3.66-18.97l-84.95-83.67Zm324.74 88.46Zm-157.94 78.58Z"/>
+      </svg>
+    }
+  </div>
+</div>
+<!--    input с двумя SVG-->
+
+<!--    input с двумя SVG-->
+<div class="b-i-svg">
+
+  <input name="pass" [type]="inputType" class="input-two-svg"
+         autocomplete="current-password"
+         placeholder="Укажите пароль" required>
+
+
+  <div class="key gcs">
+
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+         viewBox="0 -960 960 960"
+         width="24px">
+      <path
+        d="M280-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 120q-100 0-170-70T40-480q0-100 70-170t170-70q81 0 141.5 46T506-560h335l79 79-140 160-100-79-80 80-80-80h-14q-25 72-87 116t-139 44Z"></path>
+    </svg>
+
+  </div>
+
+
+  <div class="b-ei-svg cp scs borderF" (click)="toggleEye()"
+       (keydown)="handleKeydownEye($event)"
+       tabindex="0" role="checkbox">
+
+
+    @if (eye) {
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path
+          d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm.04-77.02q-42.89 0-72.95-30.02-30.07-30.03-30.07-72.92t30.02-72.95q30.03-30.07 72.92-30.07t72.95 30.02q30.07 30.03 30.07 72.92t-30.02 72.95q-30.03 30.07-72.92 30.07ZM480-192.59q-148.87 0-270.66-83.89Q87.54-360.37 32.59-500q54.95-139.63 176.75-223.52Q331.13-807.41 480-807.41t270.66 83.89Q872.46-639.63 927.41-500q-54.95 139.63-176.75 223.52Q628.87-192.59 480-192.59ZM480-500Zm.02 220q112.74 0 207-59.62T831.28-500q-50-100.76-144.28-160.38Q592.72-720 479.98-720q-112.74 0-207 59.62T128.72-500q50 100.76 144.28 160.38Q367.28-280 480.02-280Z"/>
+      </svg>
+    } @else {
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path
+          d="m645.43-432.07-68.28-68.28q7.33-38.39-22.33-72.22-29.67-33.82-76.38-26.5l-66.37-66.36q16.28-7.29 32.94-10.93Q461.67-680 480-680q75 0 127.5 52.5T660-500q0 17.85-3.64 34.99t-10.93 32.94Zm134.22 132.7-62.78-61.26q36.33-28.52 64.75-62.19 28.42-33.66 49.9-77.18-50.48-100.76-143.5-160.38Q595-720 480-720q-29 0-55.68 3.76-26.69 3.76-52.02 11.04l-68.21-68.21q41-17 84.95-25.5 43.96-8.5 90.96-8.5 152.43 0 272.47 84.69Q872.5-638.02 927.41-500q-23 59.48-60.98 110.93-37.97 51.46-86.78 89.7Zm9.48 246.24-163.7-161.94q-34.52 11.24-70.5 16.86-35.97 5.62-74.93 5.62-152.67 0-272.71-84.93Q87.26-362.46 32.59-500q20.76-52.52 53-98.86 32.24-46.34 72.76-83.29L49.3-792.72l58.63-58.63 739.59 739.83-58.39 58.39ZM219.85-621.37q-28.52 26.48-51.21 56.04-22.68 29.57-39.92 65.33 50 101 143.14 160.5Q365-280 480-280q17.85 0 35.77-2.14 17.93-2.14 37.93-5.14l-36-38q-9.81 2.76-18.85 4.02Q489.8-320 480-320q-75 0-127.5-52.5T300-500q0-9.57 1.14-18.73t3.66-18.97l-84.95-83.67Zm324.74 88.46Zm-157.94 78.58Z"/>
+      </svg>
+    }
+  </div>
+</div>
+<!--    input с двумя SVG-->
+
+
+<!--Бургер-->
+
+
+<div class="borderF b-el" [ngClass]="{'rotateZ': isRotateZ}"
+     (click)="rotate()"
+     (keydown)="handleKeydownBurger($event)"
+     tabindex="0" role="checkbox">
+  <div class="el"></div>
+  <div class="el"></div>
+  <div class="el"></div>
+</div>
+
+<!--Бургер-->
+
+<!--Логотип-->
+
+<div class="b-logo">
+  <div class="logo-name">
+    shopet
+  </div>
+  <div class="under-logo">
+    Сахалин маркет
+  </div>
+</div>
+
+<!--Логотип-->

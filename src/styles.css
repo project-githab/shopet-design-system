@@ -5,8 +5,9 @@
   --color-4: #e6c519;
   --color-6: #cdcdcd;
   --color-7: #A1A1A1;
-
-  --color-111: #ff0000;
+  --color-8: #f1f1f1;
+  --color-9: #E7E7E7;
+  --color-10: #1ec18a;
 
 
   --transform1: box-shadow 0.3s;
@@ -18,6 +19,8 @@
   --shadow-2: 0 0 8px 0 rgb(255 61 0 / 32%);
 
   --transform4: background-color 0.3s;
+
+  --rotateZ: rotateZ(45deg);
 }
 
 html {
@@ -67,7 +70,6 @@ a {
 
 /*Для жёлтой кнопки*/
 .btn-s-1 {
-  font-size: 1.6rem;
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
 }
 
@@ -77,7 +79,6 @@ a {
 }
 
 .btn-s-3 {
-  font-size: 1.6rem;
   padding: 1rem 7.5rem 1rem 7.5rem;
 }
 
@@ -128,10 +129,6 @@ a {
   cursor: pointer;
 }
 
-.minus path {
-  fill: var(--color-2);
-}
-
 .plus {
   display: flex;
   align-items: center;
@@ -140,10 +137,6 @@ a {
   height: 3.4rem;
   border-radius: 0 2.5rem 2.5rem 0;
   cursor: pointer;
-}
-
-.plus path {
-  fill: var(--color-2);
 }
 
 /*Добавить или отнять*/
@@ -221,11 +214,6 @@ a {
   box-shadow: var(--shadow-2);
 }
 
-.icon-nt path {
-  fill: var(--color-2);
-}
-
-
 /*Кнопка иконка*/
 
 
@@ -241,12 +229,10 @@ a {
   justify-content: center;
   align-items: center;
   outline: none;
+  /*transition: background-color 0.3s ease-in-out;*/
   background-color: #f1f1f1;
-  transition: background-color 0.3s ease-in-out;
 }
-.checkbox:focus {
-  box-shadow: 0 0 0 2px rgba(255, 155, 0, 0.5);
-}
+
 .checkbox:hover {
   background-color: #E7E7E7;
 }
@@ -277,6 +263,7 @@ a {
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   background-color: #f7f7f7;
 }
+
 .b-checked {
   display: flex;
   width: 8rem;
@@ -295,7 +282,6 @@ a {
 .b-inf-2 {
   display: flex;
   height: 100%;
-  font-size: 1.6rem;
   /*justify-content: flex-end;*/
 }
 
@@ -314,7 +300,7 @@ a {
   font-size: 1.1rem;
 }
 
-.b-logo {
+.b-ch-l {
   display: flex;
   /*height: 100%;*/
   align-items: center;
@@ -340,10 +326,11 @@ a {
   position: relative;
 }
 
-.name-logo {
+.name-robot {
   margin-right: 0.5rem;
   font-weight: bold;
 }
+
 .success-pre-i line {
   stroke: #000000;
   stroke-width: 1;
@@ -415,7 +402,7 @@ a {
   fill: none;
   stroke: var(--err);
   stroke-width: 4;
-  stroke-dasharray: 176;      /* длина окружности */
+  stroke-dasharray: 176; /* длина окружности */
   stroke-dashoffset: 176;
   animation: drawCircle 0.42s ease forwards;
 }
@@ -424,13 +411,10 @@ a {
   stroke: var(--err);
   stroke-width: 4;
   stroke-linecap: round;
-
-  /* для корректного scale в SVG */
   transform-box: fill-box;
   transform-origin: 32px 32px;
   transform: scale(0);
-
-  animation: pop 0.25s cubic-bezier(.2,.9,.3,1) forwards;
+  animation: pop 0.25s cubic-bezier(.2, .9, .3, 1) forwards;
 }
 
 .error-icon .line1 {
@@ -442,17 +426,193 @@ a {
 }
 
 @keyframes drawCircle {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes pop {
-  0%   { transform: scale(0); }
-  60%  { transform: scale(1.12); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*captcha*/
 
+
+/*input*/
+
+.input-i {
+  height: 4rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 22rem;
+  background-color: var(--color-8);
+  outline: none;
+  padding: 0 1rem 0 1rem;
+  border: 0.2rem solid transparent;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  font-size: 2rem;
+}
+
+.input-i:hover {
+  background-color: var(--color-9);
+}
+
+.input-i:focus {
+  background-color: var(--color-1);
+  border: 0.2rem solid #ff9b00;
+}
+
+/*input*/
+
+
+/*input с SVG иконкой*/
+.b-i-svg {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+}
+
+.i-svg {
+  height: 4rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 19rem;
+  background-color: var(--color-8);
+  outline: none;
+  padding: 0 4rem 0 1rem;
+  border: 0.2rem solid transparent;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  font-size: 2rem;
+}
+
+.i-svg:hover {
+  background-color: var(--color-9);
+}
+
+.i-svg:focus {
+  background-color: var(--color-1);
+  border: 0.2rem solid #ff9b00;
+}
+
+.b-ei-svg {
+  display: flex;
+  position: absolute;
+  border-radius: 0 0.5rem 0.5rem 0;
+  width: 4rem;
+  height: 4rem;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  justify-content: center;
+  outline: none;
+  align-items: center;
+  border-left: 0.2rem solid rgb(241, 241, 241);
+}
+
+/*input с SVG иконкой*/
+
+/*input с двумя SVG*/
+.input-two-svg {
+  height: 4rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 15rem;
+  background-color: var(--color-8);
+  outline: none;
+  padding: 0 8rem 0 1rem;
+  border: 0.2rem solid transparent;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  font-size: 2rem;
+}
+
+.input-two-svg:hover {
+  background-color: var(--color-9);
+}
+
+.input-two-svg:focus {
+  background-color: var(--color-1);
+  border: 0.2rem solid #ff9b00;
+}
+
+.key {
+  display: flex;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  right: 4.4rem;
+  bottom: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.2rem solid rgb(241, 241, 241);
+}
+
+/*input с двумя SVG*/
+
+
+/*Бургер*/
+.b-el {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  margin-right: 1rem;
+  flex-direction: column;
+}
+
+.b-el:hover {
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-1);
+}
+
+.b-el:active {
+  box-shadow: var(--shadow-2);
+}
+
+.el {
+  width: 3.8rem;
+  height: 0.7rem;
+  background-color: var(--color-2);
+  border-radius: 1.5rem;
+}
+
+.rotateZ {
+  transform: var(--rotateZ);
+}
+
+/*Бургер*/
+
+/*Логотип*/
+.b-logo {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: fit-content;
+  font-size: 3.7rem;
+  cursor: pointer;
+  transition: var(--transform1) ease-in-out;
+}
+.b-logo:hover {
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-1);
+}
+.b-logo:active {
+  box-shadow: var(--shadow-2);
+}
+.logo-name {
+  font-weight: bold;
+}
+.under-logo {
+  font-size: 1.5rem;
+}
+/*Логотип*/
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
@@ -465,6 +625,29 @@ a {
 
 .f-s {
   font-size: 1.6rem;
+}
+
+.scs path {
+  fill: var(--color-2);
+}
+
+.gcs path {
+  fill: var(--color-10);
+}
+
+.cp {
+  cursor: pointer;
+}
+
+
+.borderF {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.borderF:focus {
+  box-shadow: 0 0 0 2px rgba(255, 155, 0, 0.5);
+
+
 }
 
 /*Общие*/
