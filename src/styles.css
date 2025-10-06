@@ -168,15 +168,10 @@ a {
   height: 3.56rem;
 }
 
-.icon-t {
-  fill: var(--color-7);
-}
-
 .icon-t:hover {
   box-shadow: var(--shadow-1);
 }
-
-.hov-t:hover {
+.icon-t:hover path {
   fill: var(--color-2);
 }
 
@@ -193,7 +188,6 @@ a {
 .icon-nt {
   display: flex;
   color: var(--color-2);
-  fill: var(--color-7);
   padding: 1rem 1rem 1rem 1rem;
   border-radius: 0.5rem;
   width: fit-content;
@@ -231,8 +225,14 @@ a {
   justify-content: center;
   align-items: center;
   outline: none;
-  /*transition: background-color 0.3s ease-in-out;*/
   background-color: #f1f1f1;
+
+  /* ОБЪЕДИНЕННЫЙ TRANSITION: Включаем все свойства */
+  transition:
+    background-color 0.3s ease-in-out, /* Для :hover */
+    border-color 0.3s ease-in-out,     /* Для .checkbox-checked */
+    transform 0.3s ease-in-out,        /* Для :focus (если transform используется) */
+    box-shadow 0.3s ease-in-out;       /* Для :focus */
 }
 
 .checkbox:hover {
@@ -241,10 +241,11 @@ a {
 
 .checkbox-checked {
   background-color: #FFDC26;
-  border-color: #FFDC26;
+  border-color: #FFDC26; /* Теперь будет плавно меняться */
 }
 
 .checkbox-checked:hover {
+  /* Здесь не обязательно переопределять, т.к. фон уже #FFDC26 */
   background-color: #FFDC26;
   border-color: #FFDC26;
 }
@@ -595,15 +596,15 @@ a {
 
 /*Логотип*/
 .b-logo {
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   width: fit-content;
   font-size: 3.7rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: var(--transform1) ease-in-out;
 }
 
 .b-logo:hover {
-  border-radius: 0.5rem;
   box-shadow: var(--shadow-1);
 }
 
@@ -684,17 +685,14 @@ a {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .btn-c:hover {
   background-color: var(--color-12);
 }
-.btn-c path{
-  fill: var(--color-7);
-  transition: fill 0.3s ease;
-}
-.btn-c:hover path{
+
+.btn-c:hover path {
   fill: var(--color-1);
 }
-
 
 /*Кнопка очистить поле поиска*/
 
@@ -725,14 +723,19 @@ a {
   fill: var(--color-10);
 }
 
+.fgt path {
+  fill: var(--color-7);
+  transition: fill 0.3s ease-in-out;
+}
+
 .cp {
   cursor: pointer;
 }
 
 
-.borderF {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+/*.borderF {*/
+/*  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;*/
+/*}*/
 
 .borderF:focus {
   box-shadow: 0 0 0 2px rgba(255, 155, 0, 0.5);
